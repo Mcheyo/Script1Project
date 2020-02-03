@@ -1,11 +1,12 @@
 let animeTruth = [];
-
+let backgroundURL = ["https://pixelz.cc/wp-content/uploads/2018/07/my-neighbor-totoro-side-uhd-4k-wallpaper..jpg", "https://i.pinimg.com/originals/fc/bb/9b/fcbb9b01e4b2ce1f915474f89be3dbca.png", "https://c4.wallpaperflare.com/wallpaper/452/817/174/studio-ghibli-totoro-my-neighbor-totoro-anime-wallpaper-preview.jpg", "https://c4.wallpaperflare.com/wallpaper/746/686/492/olly-moss-studio-ghibli-hayao-miyazaki-howl-s-moving-castle-wallpaper-preview.jpg"]
 document.addEventListener("DOMContentLoaded", (e) => { 
 console.log("connected")
 fetchAnimes()
 getAnimeForm().addEventListener('submit', addAnime)
 getAnimeSearchForm().addEventListener('submit', (e)=> searchAnime(e))
 document.querySelector('h1').addEventListener('click', (e)=> fetchAnimes())
+document.getElementById("change-background").addEventListener('click', changeBackground)
 })
 
 
@@ -50,6 +51,7 @@ function buildAnime(anime){
 
    let animeCard = document.createElement('div')
    animeCard.dataset.id = anime.id
+   animeCard.className="card"
    animeContainer.appendChild(animeCard);
 
    animeTitle.innerText = anime.name 
@@ -67,6 +69,7 @@ function buildAnime(anime){
    let viewBtn = document.createElement('button')
      viewBtn.innerText = "Watched"
      viewBtn.dataset.id = anime.id 
+     
      animeCard.appendChild(viewBtn)
      viewBtn.addEventListener('click', updateView)
 
@@ -149,4 +152,14 @@ function searchAnime(event){
     let searchTerm = event.target.search.value.toLowerCase();
     let searchResults = animeTruth.filter(anime => anime.name.toLowerCase().includes(searchTerm));
     renderAnimes(searchResults);
+}
+
+function changeBackground(){ 
+     let wallpaper = document.getElementById("background")
+     let randomUrl = backgroundURL[Math.floor(Math.random()*backgroundURL.length)]
+      let backgroundString = ` body {
+        background-image: url("${randomUrl}");
+    }`
+    wallpaper.innerText = backgroundString
+     
 }

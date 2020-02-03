@@ -6,13 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anime Views</title>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
     <link rel="stylesheet" href="index.css" />
 
 </head>
+
 <body>
+    <style id="background"> body {
+        background-image: url("https://pixelz.cc/wp-content/uploads/2018/07/my-neighbor-totoro-side-uhd-4k-wallpaper..jpg");
+    }</style>
     <h1> Anime Database</h1>
     <div id = "anime-form">
-        <form class= "add-anime-form">
+        <form class= "ui form">
             <h3>Add An Anime!</h3>
             <input 
             type ="text"
@@ -34,15 +40,20 @@
             type="submit"
             name="submit"
             value="Create Anime!"
+            class="ui button"
             />
 
         </form>
     </div>
+    <br>
+    <button id="change-background" class="ui button"> 
+        change background
+    </button>
     <br><br><br>
     <div id="anime-search">
-        <form id="anime-search-form">
+        <form id="anime-search-form" class="ui form">
             <input type="text" name="search" value="" placeholder="search"><br>
-            <input type="submit" value="Search">
+            <input type="submit" value="Search" class="ui button">
         </form>
     </div>
     <div id="anime-collection"></div>
