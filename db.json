@@ -4,19 +4,35 @@
       "id": 1,
       "name": "Code Geass",
       "image": " https://vignette.wikia.nocookie.net/codegeass/images/e/e7/Movie_1_Initiation_Poster.png/revision/latest/scale-to-width-down/340?cb=20190421122728",
-      "views": 21
+      "views": 21,
+      "episodes": [
+        {"name": "The Day a New Demon was Born",
+          "synopsis": "The story follows Lelouch vi Britannia, exiled prince of Britannia, who is living under the identity Lelouch Lamperouge. His former identity was declared dead seven years ago when Britannia conquered Japan, now renamed Area 11. In the present, Lelouch is trapped inside an anti-government rebel truck as it flees from the Britanian military after stealing a container of poison gas. During the pursuit, Lelouch is reunited with his Japanese friend, Suzaku Kururugi, who is part of the military. The container opens and reveals a girl with green hair causing Suzaku's superior to issue an execution order on all witnesses. Suzaku refuses and is shot while Lelouch flees with the girl. Cornered by the military, the girl gives Lelouch a power called Geass before dying. With it, Lelouch commands his attackers to kill themselves."
+        },
+        {"name": "The White Knight Awakens",
+          "synopsis": "Lelouch is questioned by Villetta Nu about the dead soldiers. Using Geass, he orders her to give him her Knightmare Frame, a giant mechanical robot. Lelouch then leads the terrorist group to combat Viceroy Clovis la Britannia's army, forcing them to utilize the experimental Knightmare Frame Lancelot piloted by Suzaku. The Lancelot defeats the rebel group while Lelouch holds Clovis at gunpoint and orders him to withdraw his army."
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Neon Genesis Evangelion",
       "image": "https://www.cel-ga.com/4107/anime-poster-neon-genesis-evangelion.jpg",
-      "views": 16
+      "views": 17
     },
     {
       "id": 3,
       "name": "Cowboy Bepop",
       "image": "https://m.media-amazon.com/images/M/MV5BNGNlNjBkODEtZThlOC00YzUxLWI0MjMtMjk3YzJmMDFlNWZlXkEyXkFqcGdeQXVyNjI0MDg2NzE@._V1_.jpg",
-      "views": 24
+      "views": 24,
+      "episodes": [
+        {"name": "Asteroid Blues",
+          "synopsis": "Spike Spiegel, a bounty hunter, and his partner Jet Black head to the Tijuana asteroid colony on their ship, the Bebop, to track down a bounty-head named Asimov Solensan. Asimov is wanted for killing members of his own crime syndicate and stealing a cache of a dangerous combat drug known as Bloody-Eye. On the colony, Asimov and his girlfriend, Katerina, are ambushed at a bar by his former syndicate while attempting to sell a vial of Bloody-Eye, but Asimov fights his way out by using the drug himself. Spike later encounters Katerina and reveals to her that he is a bounty hunter searching for Asimov; Spike is assaulted by Asimov and nearly killed before Katerina intervenes. In the confusion, Spike steals Asimov's Bloody-Eye vial before the two leave. Spike later confronts Asimov at a staged drug deal with the stolen vial. Asimov escapes with Katerina in a ship when the two are interrupted by an attack from the syndicate. With Spike giving chase in his own ship, Asimov takes another dose of Bloody-Eye as they rush towards a police blockade. Katerina, realizing they will never escape, shoots Asimov as Spike nears their ship. As Spike approaches Asimov's ship, it is destroyed by attacking police cruisers, forcing Spike to pull away."
+        },
+        {"name": "Stray Dog Strut",
+          "synopsis": "A bounty takes Spike and Jet to Mars, where their target, Abdul Hakim, is wanted for stealing a valuable lab animal. To avoid capture, Hakim has had plastic surgery to change his appearance. At a bar, Hakim's briefcase containing the animal is stolen. Spike discovers the thief attempting to sell the animal at a pet store and, assuming him to be Hakim, holds him at gunpoint. The case contains a Welsh corgi. "
+        }
+      ]
     },
     {
       "id": 4,
@@ -28,7 +44,7 @@
       "id": 5,
       "name": "Jojos Bizzare Adventure",
       "image": "https://i.ebayimg.com/00/s/ODIwWDY1MQ==/z/F~wAAOSw7ZRZjSKH/$_57.JPG",
-      "views": 2
+      "views": 7
     },
     {
       "id": 6,
@@ -46,7 +62,7 @@
       "id": 8,
       "name": "Full Metal Alchemist: Brotherhood",
       "image": "https://occ-0-1068-1722.1.nflxso.net/dnm/api/v6/0DW6CdE4gYtYx8iy3aj8gs9WtXE/AAAABSJzPuiHyC3rRLG8hQyCQBD04hF-wVaRXqcYO24yvksCyQCkzu8sgLqLR8AODZ2ByEdg0fzVKdjQ4IORP0njJqcP41Tr.jpg?r=520",
-      "views": 2
+      "views": 5
     },
     {
       "id": 9,

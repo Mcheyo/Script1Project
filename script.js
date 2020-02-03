@@ -1,21 +1,45 @@
+let animeTruth = [];
+
 document.addEventListener("DOMContentLoaded", (e) => { 
 console.log("connected")
 fetchAnimes()
 getAnimeForm().addEventListener('submit', addAnime)
-
+getAnimeSearchForm().addEventListener('submit', (e)=> searchAnime(e))
+document.querySelector('h1').addEventListener('click', (e)=> fetchAnimes())
 })
+
+
+function getAnimeSearchForm(){
+    return document.getElementById('anime-search-form')
+}
+
 function getAnimeForm(){ 
     return document.getElementById("anime-form")
 }
 function fetchAnimes() { 
     fetch('http://localhost:3000/animes')
     .then(r => r.json())
-    .then(data => renderAnimes(data))
+    .then(data => {
+        animeTruth = data;
+        renderAnimes();
+    })
 }
 
-function renderAnimes(data){ 
- data.forEach(anime => buildAnime(anime))
+function renderAnimes(searchArray){ 
+    clearAnime();
+    if(!searchArray){
+        animeTruth.forEach(anime => buildAnime(anime))}
+    else{
+        searchArray.forEach(anime => buildAnime(anime))
+    }
 }
+
+function clearAnime(){
+    while(getContainer().firstChild){
+        getContainer().removeChild(getContainer().firstChild);
+    }
+}
+
 function getContainer(){ 
     return document.getElementById("anime-collection")
 }
@@ -23,23 +47,60 @@ function getContainer(){
 function buildAnime(anime){ 
    let animeContainer =  getContainer()
    let animeTitle = document.createElement("h2")
+
+   let animeCard = document.createElement('div')
+   animeCard.dataset.id = anime.id
+   animeContainer.appendChild(animeCard);
+
    animeTitle.innerText = anime.name 
-   animeContainer.appendChild(animeTitle)
+   animeCard.appendChild(animeTitle)
 
    let animeImg = document.createElement("img")
    animeImg.className = "card-image"
    animeImg.src = anime.image 
-   animeContainer.appendChild(animeImg)
+   animeCard.appendChild(animeImg)
 
    let animeView = document.createElement('p')
    animeView.innerText = `Views: ${anime.views}`
-   animeContainer.appendChild(animeView)
+   animeCard.appendChild(animeView)
 
    let viewBtn = document.createElement('button')
      viewBtn.innerText = "Watched"
      viewBtn.dataset.id = anime.id 
-     animeContainer.appendChild(viewBtn)
+     animeCard.appendChild(viewBtn)
      viewBtn.addEventListener('click', updateView)
+
+    let deleteButton = document.createElement('button');
+    deleteButton.innerText = "Delete";
+    deleteButton.addEventListener('click', (e)=> deleteOneAnime(e))   
+    deleteButton.dataset.id = anime.id;
+    animeCard.appendChild(deleteButton);
+
+    if(anime.episodes){
+        anime.episodes.forEach(episode => {
+
+            let episodeButton = document.createElement('button');
+            episodeButton.innerText = episode.name;
+            episodeButton.addEventListener('click', (e)=> showEpisode(e, episode.name, episode.synopsis))
+            animeCard.appendChild(episodeButton);
+        })
+    }
+}
+
+function showEpisode(event, name, synopsis){
+
+    console.log(event)
+    console.log(name)
+    console.log(synopsis)
+    alert(synopsis)
+}
+
+function deleteOneAnime(event){
+
+    console.log(event);
+    console.log(`You've deleted this anime`)
+    event.target.parentElement.remove()
+    alert("You've removed this anime from your view list")
 }
 
 function addAnime(event){ 
@@ -79,4 +140,13 @@ function incrementViews(event){
   let increment  = parseInt(views[1])
   
   return ++increment
+}
+
+
+function searchAnime(event){
+    event.preventDefault();
+    console.log(event);
+    let searchTerm = event.target.search.value.toLowerCase();
+    let searchResults = animeTruth.filter(anime => anime.name.toLowerCase().includes(searchTerm));
+    renderAnimes(searchResults);
 }
