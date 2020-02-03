@@ -1,0 +1,64 @@
+{
+  "animes": [
+    {
+      "id": 1,
+      "name": "Code Geass",
+      "image": " https://vignette.wikia.nocookie.net/codegeass/images/e/e7/Movie_1_Initiation_Poster.png/revision/latest/scale-to-width-down/340?cb=20190421122728",
+      "views": 21
+    },
+    {
+      "id": 2,
+      "name": "Neon Genesis Evangelion",
+      "image": "https://www.cel-ga.com/4107/anime-poster-neon-genesis-evangelion.jpg",
+      "views": 16
+    },
+    {
+      "id": 3,
+      "name": "Cowboy Bepop",
+      "image": "https://m.media-amazon.com/images/M/MV5BNGNlNjBkODEtZThlOC00YzUxLWI0MjMtMjk3YzJmMDFlNWZlXkEyXkFqcGdeQXVyNjI0MDg2NzE@._V1_.jpg",
+      "views": 24
+    },
+    {
+      "id": 4,
+      "name": "Demon Slayers",
+      "image": "https://i.pinimg.com/originals/82/4f/37/824f37c97cd34965d4ee753168132f0b.jpg",
+      "views": 5
+    },
+    {
+      "id": 5,
+      "name": "Jojos Bizzare Adventure",
+      "image": "https://i.ebayimg.com/00/s/ODIwWDY1MQ==/z/F~wAAOSw7ZRZjSKH/$_57.JPG",
+      "views": 2
+    },
+    {
+      "id": 6,
+      "name": "Naruto: Shippuden",
+      "image": "https://ib3.hulu.com/user/v3/artwork/c6321cb1-1879-4d7f-9e2f-8d7d4fc55544?base_image_bucket_name=image_manager&base_image=2b4f9b88-9694-49ad-8814-2e7f607a0815&size=400x600&format=jpeg",
+      "views": 3
+    },
+    {
+      "id": 7,
+      "name": "One Piece",
+      "image": "https://cnet1.cbsistatic.com/img/IPUEMxfPQJg-RXqNaLl4sTJQNd8=/1092x0/2020/01/29/0e98a39c-221f-4162-91c9-c8652a3f23d4/one-piece.jpg",
+      "views": 1
+    },
+    {
+      "id": 8,
+      "name": "Full Metal Alchemist: Brotherhood",
+      "image": "https://occ-0-1068-1722.1.nflxso.net/dnm/api/v6/0DW6CdE4gYtYx8iy3aj8gs9WtXE/AAAABSJzPuiHyC3rRLG8hQyCQBD04hF-wVaRXqcYO24yvksCyQCkzu8sgLqLR8AODZ2ByEdg0fzVKdjQ4IORP0njJqcP41Tr.jpg?r=520",
+      "views": 2
+    },
+    {
+      "id": 9,
+      "name": "Death Note",
+      "image": "https://m.media-amazon.com/images/I/81aEb4NBysL._SS500_.jpg",
+      "views": 2
+    },
+    {
+      "name": "Attack on Titan",
+      "image": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fs3-ap-northeast-1.amazonaws.com%2Fpsh-ex-ftnikkei-3937bb4%2Fimages%2F1%2F6%2F9%2F6%2F8146961-1-eng-GB%2F20140130_titan2.jpg?source=nar-cms",
+      "views": "0",
+      "id": 10
+    }
+  ]
+}
